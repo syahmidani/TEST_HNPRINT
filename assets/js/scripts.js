@@ -364,6 +364,40 @@ $(document).ready(function(){
     });
 });
 
+/*===================================================================================*/
+/*  SIZE
+/*===================================================================================*/
+// When the "plus" button within a .size-input element is clicked
+$('.size-input .plus').click(function() {
+    // Get the current selected index of the size in the dropdown
+    var selectedSizeIndex = $(this).parent().next().prop('selectedIndex');
+
+    // Increment the index to select the next size
+    selectedSizeIndex++;
+
+    // Ensure the index does not exceed the number of available sizes
+    var maxSizeIndex = $(this).parent().next().children('option').length - 1;
+    if (selectedSizeIndex <= maxSizeIndex) {
+        // Set the updated selected index for the size dropdown
+        $(this).parent().next().prop('selectedIndex', selectedSizeIndex);
+    }
+});
+
+// When the "minus" button within a .size-input element is clicked
+$('.size-input .minus').click(function() {
+    // Get the current selected index of the size in the dropdown
+    var selectedSizeIndex = $(this).parent().next().prop('selectedIndex');
+
+    // Decrement the index to select the previous size
+    selectedSizeIndex--;
+
+    // Ensure the index does not go below 0
+    if (selectedSizeIndex >= 0) {
+        // Set the updated selected index for the size dropdown
+        $(this).parent().next().prop('selectedIndex', selectedSizeIndex);
+    }
+});
+
 
 /*===================================================================================*/
 /*  QUANTITY

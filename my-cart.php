@@ -42,13 +42,15 @@ else{
 	$quantity=$_POST['quantity'];
 	$pdd=$_SESSION['pid'];
 	$value=array_combine($pdd,$quantity);
+	$size=$_POST['size'];
+
 
 
 		foreach($value as $qty=> $val34){
 
 
 
-mysqli_query($con,"insert into orders(userId,productId,quantity) values('".$_SESSION['id']."','$qty','$val34')");
+mysqli_query($con,"insert into orders(userId,productId,size,quantity) values('".$_SESSION['id'].",'$size','$qty','$val34')");
 header('location:payment-method.php');
 }
 }
@@ -127,7 +129,7 @@ echo "<script>alert('Shipping Address has been updated');</script>";
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/HNPrint_Logo.png">
 
 		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
 		<!--[if lt IE 9]>
@@ -458,7 +460,7 @@ echo "Your shopping Cart is empty";
 
     // Function to update the size value based on arrow clicks
     function updateSize(direction) {
-        const sizes = ["S", "M", "L", "XL", "2XL", "3XL", "4XL"];
+        const sizes = ["XS","S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"];
         const currentIndex = sizes.indexOf(size);
         if (direction === "up" && currentIndex < sizes.length - 1) {
             size = sizes[currentIndex + 1];

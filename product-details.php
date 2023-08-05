@@ -37,6 +37,7 @@ header('location:my-wishlist.php');
 }
 if(isset($_POST['submit']))
 {
+	$osize=$_POST['size'];
 	$qty=$_POST['quality'];
 	$price=$_POST['price'];
 	$value=$_POST['value'];
@@ -79,7 +80,7 @@ if(isset($_POST['submit']))
 
         <!-- Fonts --> 
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
-		<link rel="shortcut icon" href="assets/images/favicon.ico">
+		<link rel="shortcut icon" href="assets/images/HNPrint_Logo.png">
 	</head>
     <body class="cnt-home">
 	
@@ -402,7 +403,7 @@ $num=mysqli_num_rows($rt);
 								<div class="row">
 									
 									<div class="col-sm-2">
-										<span class="label">Qty :</span>
+										<span class="label">Quantity :</span>
 									</div>
 									
 									<div class="col-sm-2">
@@ -703,7 +704,7 @@ while($rw=mysqli_fetch_array($qry))
 
     // Function to update the size value based on arrow clicks
     function updateSize(direction) {
-        const sizes = ["S", "M", "L", "XL", "2XL", "3XL", "4XL"];
+        const sizes = ["XS","S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL"];
         const currentIndex = sizes.indexOf(size);
         if (direction === "up" && currentIndex < sizes.length - 1) {
             size = sizes[currentIndex + 1];
