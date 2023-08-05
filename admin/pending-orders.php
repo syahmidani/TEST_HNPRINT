@@ -36,6 +36,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	</head>
 
 	<body>
+
 		<?php include('include/header.php'); ?>
 
 		<div class="wrapper">
@@ -63,7 +64,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 									<div class="table-responsive"> <!-- Add 'table-responsive' class to a separate div -->
 										<table cellpadding="0" cellspacing="0" border="0"
-											class="table table-bordered table-striped display">
+											class="datatable-1 table table-bordered table-striped display">
 
 											<thead>
 												<tr>
