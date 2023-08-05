@@ -38,6 +38,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	<body>
 		<?php include('include/header.php'); ?>
 
+		
 		<div class="wrapper">
 			<div class="container">
 				<div class="row">
