@@ -6,8 +6,8 @@ $cid=intval($_GET['cid']);
 if(isset($_GET['action']) && $_GET['action']=="add"){
 	$id=intval($_GET['id']);
 	if(isset($_SESSION['cart'][$id])){
-		$_SESSION['cart'][$id]['quantity']++;
 		$_SESSION['cart'][$id]['size'] = $size;
+		$_SESSION['cart'][$id]['quantity']++;
 	}else{
 		$sql_p="SELECT * FROM products WHERE id={$id}";
 		$query_p=mysqli_query($con,$sql_p);

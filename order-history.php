@@ -126,7 +126,7 @@ while($row=mysqli_fetch_array($query))
 						
 						
 					</td>
-					<td class="cart-product-quantity">
+					<td class="cart-product-size">
 						<?php echo $osize=$row['osize']; ?>   
 		            </td>
 					<td class="cart-product-quantity">

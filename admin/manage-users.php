@@ -63,7 +63,6 @@ if(isset($_GET['del']))
 											<th>Email </th>
 											<th>Contact no</th>
 											<th>Shippping Address/City/State/Pincode </th>
-											<th>Billing Address/City/State/Pincode </th>
 											<th>Reg. Date </th>
 										
 										</tr>
@@ -81,7 +80,6 @@ while($row=mysqli_fetch_array($query))
 											<td><?php echo htmlentities($row['email']);?></td>
 											<td> <?php echo htmlentities($row['contactno']);?></td>
 											<td><?php echo htmlentities($row['shippingAddress'].",".$row['shippingCity'].",".$row['shippingState']."-".$row['shippingPincode']);?></td>
-											<td><?php echo htmlentities($row['billingAddress'].",".$row['billingCity'].",".$row['billingState']."-".$row['billingPincode']);?></td>
 											<td><?php echo htmlentities($row['regDate']);?></td>
 											
 										<?php $cnt=$cnt+1; } ?>

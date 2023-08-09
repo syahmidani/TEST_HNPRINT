@@ -369,6 +369,10 @@ a {
 .shopping-cart .cart-shopping-total table thead tr th .cart-grand-total {
   color: #0b816a;
 }
+.shopping-cart-table table tbody tr td .size-input .arrows .arrow:hover,
+.shopping-cart-table table tbody tr td .size-input .arrows .arrow:focus {
+  color: #12cca7;
+}
 .shopping-cart-table table tbody tr td .quant-input .arrows .arrow:hover,
 .shopping-cart-table table tbody tr td .quant-input .arrows .arrow:focus {
   color: #12cca7;

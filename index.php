@@ -5,8 +5,8 @@ include('includes/config.php');
 if(isset($_GET['action']) && $_GET['action']=="add"){
 	$id=intval($_GET['id']);
 	if(isset($_SESSION['cart'][$id])){
-		$_SESSION['cart'][$id]['quantity']++;
 		$_SESSION['cart'][$id]['size'] = $size;
+		$_SESSION['cart'][$id]['quantity']++;
 	}else{
 		$sql_p="SELECT * FROM products WHERE id={$id}";
 		$query_p=mysqli_query($con,$sql_p);
@@ -356,7 +356,7 @@ while ($row=mysqli_fetch_array($ret))
 				<div class="row">
 					<div class="col-md-6">
 	                   <section class="section">
-	                   	<h3 class="section-title">Version 1</h3>
+	                   	<h3 class="section-title">Promotion</h3>
 	                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	   
 <?php
@@ -407,7 +407,7 @@ while ($row=mysqli_fetch_array($ret))
 					</div>
 					<div class="col-md-6">
 						<section class="section">
-							<h3 class="section-title">Version 2</h3>
+							<h3 class="section-title">New Products</h3>
 		                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	<?php
 $ret=mysqli_query($con,"select * from products where category=11 and subCategory=26");
@@ -464,7 +464,7 @@ while ($row=mysqli_fetch_array($ret))
 		
 
 	<section class="section featured-product inner-xs wow fadeInUp">
-		<h3 class="section-title">Version 3</h3>
+		<h3 class="section-title">TOP SELLING</h3>
 		<div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
 			<?php
 $ret=mysqli_query($con,"select * from products where category=7 and subCategory=17");

@@ -117,7 +117,7 @@ while($row=mysqli_fetch_array($query))
 										<tr>
 											<th>#</th>
 											<th>Category</th>
-											<th>Description</th>
+											<th>SubCategory</th>
 											<th>Creation date</th>
 											<th>Last Updated</th>
 											<th>Action</th>
